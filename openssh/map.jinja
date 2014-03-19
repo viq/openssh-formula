@@ -7,6 +7,7 @@
         'sshd_config_src': 'salt://openssh/files/sshd_config',
         'banner': '/etc/ssh/banner',
         'banner_src': 'salt://openssh/files/banner',
+        'subsystem_sftp': '/usr/lib/openssh/sftp-server',
     },
     'RedHat': {
         'server': 'openssh-server',
@@ -16,5 +17,6 @@
         'sshd_config_src': 'salt://openssh/files/sshd_config',
         'banner': '/etc/ssh/banner',
         'banner_src': 'salt://openssh/files/banner',
+        'subsystem_sftp': '/usr/libexec/openssh/sftp-server',
     },
 }, merge=salt['pillar.get']('openssh:lookup')) %}
